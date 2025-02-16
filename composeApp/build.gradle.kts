@@ -55,6 +55,7 @@ kotlin {
             implementation(libs.androidx.navigation.composee)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.kotlinx.datetime)
+
         }
 
         commonTest.dependencies {
@@ -100,10 +101,11 @@ android {
     }
 }
 
-//https://developer.android.com/develop/ui/compose/testing#setup
 dependencies {
-    androidTestImplementation(libs.androidx.uitest.junit4)
-    debugImplementation(libs.androidx.uitest.testManifest)
+    androidTestImplementation("androidx.test.ext:junit:1.5.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.5.0")
+
 }
 
 compose.desktop {
@@ -132,3 +134,4 @@ compose.desktop {
 tasks.register<ComposeHotRun>("runHot") {
     mainClass.set("HotrunKt")
 }
+
