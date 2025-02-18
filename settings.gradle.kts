@@ -10,7 +10,7 @@ pluginManagement {
               	includeGroupByRegex("android.*")
             }
         }
-        gradlePluginPortal()
+        gradlePluginPortal {}
         mavenCentral()
         maven("https://packages.jetbrains.team/maven/p/firework/dev")
     }
